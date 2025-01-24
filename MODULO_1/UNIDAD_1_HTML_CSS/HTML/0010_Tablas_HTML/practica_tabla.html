@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+    }
+    th {
+        background-color: rgb(230, 227, 227);
+    }
+    tr{
+        background-color: #f9f9f9;
+    }
+</style>
+<body>
+    <h1>Tabla</h1>
+    <table  border="1">
+        <tr>
+            <th>Nombre</th>
+            <th colspan="2">Contactos</th>
+            <th rowspan="2">Direccion</th>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <th>Mail</th>
+            <th>Telefono</th>
+        </tr>
+        <tr>
+            <td>Juan Perez</td>
+            <td>juan@example.com</td>
+            <td>+34 600 123 456</td>
+            <td rowspan="2">Calle falsa 123, Madrid</td>
+        </tr>
+        <tr>
+            <td>Ana Garcia</td>
+            <td>anna@example.com</td>
+            <td>+34 600 123 457</td>
+        </tr>
+        <tr>
+            <td>Pedro Lopez</td>
+            <td colspan="2">pedro@example.com</td>
+            <td>Avenida Siempre Viva 456, Barcelona</td>
+            
+        </tr>
+    </table>
+
+</body>
+</html>
