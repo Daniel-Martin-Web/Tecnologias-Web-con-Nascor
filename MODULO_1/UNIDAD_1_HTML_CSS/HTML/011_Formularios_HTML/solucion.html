@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            max-width: 400px; /* Limita el ancho del formulario */
+            margin: 0 auto;   /* Centra el formulario */
+            padding: 10px;    /* Espaciado interno */
+            border: 1px solid #ccc; /* Borde sencillo */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        input[type="submit"] {
+            width: auto; /* Botón ajustado al contenido */
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <legend>Datos del Formulario</legend>
+        <fieldset>
+            <legend>Información Personal</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+            
+            <label for="edad">Fecha Nacimiento:</label>
+            <input type="date" id="edad" name="edad" required>
+            
+            <label for="genero">Género:</label>
+            <label for="Mujer">Mujer:</label>
+            <input type="radio" id="female" name="genero" value="Mujer" required>
+            <label for="Hombre">Hombre:</label>
+            <input type="radio" id="male" name="genero" value="Hombre" required>
+        </fieldset>
+    
+
+        <fieldset>
+            <legend>Información de Contacto</legend>
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+            
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{9}">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </fieldset>
+    
+
+        <input type="submit" value="Enviar">
+    </form>
+    
+</body>
+</html>
