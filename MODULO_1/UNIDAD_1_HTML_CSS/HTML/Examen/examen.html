@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+</head>
+<style>
+    table {
+        width: 50%;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 3px solid black;
+        padding: 8px;
+        text-align: center;
+    }
+
+    th {
+        background-color: rgb(230, 227, 227);
+    }
+
+    tr {
+        background-color: #f9f9f9;
+    }
+
+    input,
+    select {
+        width: 95%;
+        border: none;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .range-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+</style>
+
+<body>
+    <h1>Datos personales</h1>
+    <form action="recibir.html" method="GET">
+        <table width="100%" border="0">
+            <tr>
+                <th>Nombre</th>
+                <td><input type="text" name="nombre" value="" required></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><input type="email" name="email" value="" required></td>
+            </tr>
+            <tr>
+                <th>Fecha nacimiento</th>
+                <td><input type="date" name="fecha_nacimiento" value="" required></td>
+            </tr>
+            <tr>
+                <th>Cursos</th>
+                <td>
+                    <select name="curso" required>
+                        <option value="" disabled selected>Selecciona un curso</option>
+                        <option value="html">HTML Básico</option>
+                        <option value="css">CSS</option>
+                        <option value="js">JavaScript</option>
+                        <option value="php">PHP</option>
+                        <option value="python">Python para Principiantes</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Estudios</th>
+                <td>
+                    <select name="estudios" required>
+                        <option value="" disabled selected>Selecciona un nivel</option>
+                        <option value="Basico">Básico</option>
+                        <option value="Medio">Medio</option>
+                        <option value="Superior">Superior</option>
+                        <option value="Titulo">Titulo</option>
+                        <option value="Master">Master</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Nivel de Inglés</th>
+                <td>
+                    <div class="range-container">
+                        <input type="range" name="nivel_ingles" min="1" max="10" value="5" id="nivel_ingles" oninput="nivel_valor.textContent = this.value">
+                        <span id="nivel_valor">5</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>Enviar</th>
+                <td><input type="submit" value="Guardar"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
