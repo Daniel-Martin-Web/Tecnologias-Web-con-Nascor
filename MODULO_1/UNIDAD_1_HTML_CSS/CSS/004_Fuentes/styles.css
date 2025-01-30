@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.cta-container {
+    background-image: url('https://cdn.pixabay.com/photo/2023/11/26/08/27/leaves-8413064_1280.jpg');
+    background-size: cover;
+    text-align: center;
+    font-family: "Imperial Script", serif;
+    font-weight: 400;
+    font-size: 60px;
+    font-style: normal;
+    padding: 25vh;
+    height: 100vh;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+    font-size: 1rem;
+    padding: 0.5em 2em;
+    /* em */
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
