@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boton JS</title>
+    <style type="text/css">
+    button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+    </style>
+</head>
+<body>
+    <button type="button" onclick="alert('Hola Mundo')">Boton ¡Clica Aqui!</button>
+</body>
+<script>
+    let boton = document.querySelector('button');
+    boton.addEventListener('mouseleave', function(){
+        alert('Adios Mundo');
+    });
+    boton.addEventListener('click', function() {
+        alert('Hola Mundo');
+    });
+
+    let nombreUsuario = prompt('Bienvenido: Escribe tu nombre por favor');
+
+    alert('Hola ' + nombreUsuario);
+
+    document.write('Hola ' + nombreUsuario);
+
+    console.log('Hola '+ nombreUsuario);
+</script>
+</html>
