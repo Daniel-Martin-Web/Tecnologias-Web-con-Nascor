@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos</title>
+</head>
+<body>
+    
+</body>
+<script>    
+    var numeroEntero = 5;
+    var numeroDecimal = 3.14;
+    var numeroNegativo = -10;
+    console.log("Numero Entero: ", numeroEntero);
+    console.log("Numero Decimal: ", numeroDecimal);
+    console.log("Numero Negativo: ", numeroNegativo);
+
+    let alumnos = [
+        { nombre: "Juan", edad: 18},
+        { nombre: "Maria", edad: 20},
+        { nombre: "Pedro", edad: 17}
+    ];
+
+    console.log("Nombre Alumno: " + alumnos[1].edad);
+
+    let frutas = [
+        'manzanas',
+        'peras',
+        'uvas',
+        'naranjas',
+        'melon',
+        'sandias',
+    ]
+
+    console.log("Nombre del alumno: alias \'Juan'\" + nombre");
+    console.log("Edad del alumno: " + alumnos[0].edad);
+    console.log("Frutas 1-" + frutas[0] + ' 2.-' + frutas[1] + '3.-' + frutas[2] + '4.-' + frutas[3]);
+
+    let str=` ${alumnos[0].nombre},
+     edad: ${alumnos[0].edad}`;
+
+     document.write(str);
+</script>
+</html>

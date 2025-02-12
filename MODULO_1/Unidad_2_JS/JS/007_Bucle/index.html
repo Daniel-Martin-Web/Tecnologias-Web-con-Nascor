@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document JS</title>
+</head>
+<body>
+    <script>
+        //Ejercicio 7.A
+        for (let i = 0; i < 5; i++) {
+    document.write(i + "<br>");
+}
+        //Ejercicio 7.B
+        for (let i = 0; i < 5; i++) {
+    console.log(i); // Imprime el número
+    if (i === 2) {
+        break; // Rompe el bucle cuando i llega a 2
+    }
+}
+
+let suma = 0;
+
+for (let i = 1; i <= 100; i++) {
+    suma += i;
+}
+
+console.log("La suma de los números del 1 al 100 es:", suma);
+
+        //Ejercicio 7.C
+        //Pido un numero y me da asteriscos incrementando hasta llegar a ese numero
+let n = parseInt(prompt('Dame un número +'));  
+let estrellitaPlus = '*';  
+
+for (let i = 0; i < n; i++) {  
+    console.log(estrellitaPlus);  
+    estrellitaPlus += '*';  
+}
+    //Pido un numero y me da asteriscos decrementando hasta llegar a ese numero
+let n1 = parseInt(prompt('Dame un número -'));
+let estrellitaMinus = '*'.repeat(n); // Genera la línea inicial con n asteriscos
+
+for (let i = n; i > 0; i--) {
+    console.log(estrellitaMinus);
+    estrellitaMinus = estrellitaMinus.slice(0, -1); // Elimina el último carácter
+}
+    </script>
+</body>
+</html>
