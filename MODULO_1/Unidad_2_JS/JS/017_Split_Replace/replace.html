@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace</title>
+</head>
+<body>
+
+    <h2>Escribe una frase:</h2>
+    <input type="text" id="frase" placeholder="Introduce una frase" required>
+    <button id="Reemplazar">Reemplazar palabra</button>
+
+    <h3>Frase modificada:</h3>
+    <p id="resultado"></p>
+
+    <script>
+        document.getElementById("Reemplazar").addEventListener("click", function() {
+            let frase = document.getElementById("frase").value.trim();
+
+            if (frase === "") {
+                alert(" Debes escribir una frase primero.");
+                return;
+            }
+
+            let palabraOriginal = prompt("Introduce la palabra que quieres reemplazar:");
+            if (!palabraOriginal) return; // Si cancela, no hace nada
+
+            let palabraNueva = prompt("Introduce la palabra de reemplazo:");
+            if (!palabraNueva) return; // Si cancela, no hace nada
+
+            let nuevaFrase = frase.replace(new RegExp(`\\b${palabraOriginal}\\b`, "gi"), palabraNueva);
+
+            document.getElementById("resultado").textContent = nuevaFrase;
+        });
+    </script>
+
+</body>
+</html>

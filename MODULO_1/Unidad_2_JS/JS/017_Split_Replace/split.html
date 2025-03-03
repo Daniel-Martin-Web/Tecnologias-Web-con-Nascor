@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split</title>
+</head>
+<body>
+
+    <h2>Introduce una frase:</h2>
+    <form id="form">
+        <input type="text" id="frase" placeholder="Escribe aquí..." required>
+        <button type="submit">Dividir</button>
+    </form>
+
+    <h3>Palabras:</h3>
+    <ul id="lista"></ul>
+
+    <script>
+        let form = document.querySelector('#form');
+        let lista = document.querySelector('#lista');
+        
+        form.addEventListener("submit", function(e){
+            e.preventDefault();
+            let frase = document.querySelector('#frase').value;
+
+            let arrayFrase = frase.split(' ');
+
+            arrayFrase.forEach(palabra => {
+                lista.innerHTML = lista.innerHTML + "<li> \"el usario ha escrito:\" " + palabra + "</li>"
+            });
+        })
+    </script>
+</body>
+</html>

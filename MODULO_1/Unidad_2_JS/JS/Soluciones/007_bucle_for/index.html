@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucle for</title>
+</head>
+
+<body>
+
+
+    <script>
+        let numUsuario = parseInt(prompt('Comprobemos que eres humano ¿Cuánto es 9 + 5?'));
+
+        if (isNaN(numUsuario)) {
+            // Si no es un número lo introducido
+            alert('Debes introducir un número');
+            window.location.reload();
+        } else {
+            let coma = ',';
+            const valorParaBreak = 2;
+            for (i = 0; i <= numUsuario; i++) {
+               
+                if (i === 2) break;
+                document.write(i + coma);
+                // Rompemos el bucle. Orden en una sola línea.
+                
+            }
+        }
+        /// Suma de números del 1 al 10
+        let suma = 0;
+        for (i=0; i<=100; i++){
+            suma+=i;
+        }
+        document.write("<hr>La suma de los números del uno al 100 es: <b>" + suma + "</b>");
+        
+        // Imprimir números pares del 1 al 20
+        document.write('<hr>Números pares del 1 al 20<br>')
+        for (i=1; i<=20; i++){
+            if (i%2 === 0) document.write(i + "<br>");
+        }
+       
+        // Imprimir triángulo de asteriscos
+        /*  ****
+            ***
+            **
+            *
+        */
+ 
+            // Imprimimos * por valor de j
+            // J toma el valor de i en cada momento del bucle superior
+        for (i = 4; i>0; i--){
+            for (j=i; j>0;j--){
+                document.write("*");
+            }
+            document.write('<br>')
+        }
+        for (j=i; j>0;j--){
+                document.write("*");
+            }
+            document.write('<br>')
+   </script>
+</body>
+
+</html>

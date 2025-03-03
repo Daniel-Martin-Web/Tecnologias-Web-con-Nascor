@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fechas JS - Calcular edad</title>
+</head>
+
+<body>
+    <h2>Calcula tu edad</h2>
+    <p id="edad"></p>
+    <script>
+        // Función para validar la fecha en formato YYYY-MM-DD
+        function esFechaValida(fecha) {
+
+            const regex = /^\d{4}-\d{2}-\d{2}$/;
+            if (!regex.test(fecha)) {
+                return false;
+            }
+            const date = new Date(fecha);
+            const timestamp = date.getTime();
+            if (typeof timestamp !== 'number' || Number.isNaN(timestamp)) {
+                return false;
+            }
+            const [year, month, day] = fecha.split('-');
+            if (date.getUTCFullYear() !== parseInt(year) ||
+                date.getUTCMonth() + 1 !== parseInt(month) ||
+                date.getUTCDate() !== parseInt(day)) {
+                return false;
+            }
+
+            return true;
+        }
+      
+        let fechaNacimiento = prompt("Introduce tu fecha de nacimiento con el siguiente formato: YYYY-MM-DD");
+        
+        if (!esFechaValida(fechaNacimiento)){
+                document.querySelector('#edad').innerHTML = 'Introduce una fecha válida con el siguiente formato: YYYY-MM-DD'; 
+                document.querySelector('#edad').innerHTML += ' <button onclick="window.location.reload"> volver a introducir</button>';
+               // window.location.reload()
+        }
+       
+
+        let objFechaNacimiento = new Date(fechaNacimiento);
+        let fechaActual = new Date();
+        // Descomponemos fecha de nacimiento 
+        let nacimFullYear = objFechaNacimiento.getFullYear();
+        let nacimMes = objFechaNacimiento.getMonth();
+        let nacimDia = objFechaNacimiento.getDate();
+        // Descomponemos fecha actual
+        let actualFullYear = fechaActual.getFullYear();
+        let actualMes = fechaActual.getMonth();
+        let actualDia = fechaActual.getDate();
+
+        let edad = actualFullYear - nacimFullYear;
+
+        if (actualMes < nacimMes || (actualMes === nacimMes && actualDia < nacimDia)) {
+            edad--;
+        }
+        document.querySelector('#edad').innerHTML = 'Hola, tu edad es de ' + edad; 
+    </script>
+</body>
+
+</html>

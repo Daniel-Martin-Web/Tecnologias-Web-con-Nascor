@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucle While</title>
+</head>
+
+<body>
+
+    <script>
+        // --- WHILE -- //
+        let i = 0;
+        while (i < 10) {
+            document.write(i);
+            i++;
+        }
+        // --- DO WHILE -- //
+        do {
+            document.write(i);
+            i--;
+        } while (i >= 0);
+
+        // Dif while y do while
+        let j = 0;
+        while (j > 0) { // Nunca entra porque 0 NO es mayor que 0
+            console.log('SIN do-while: j = ' + j);
+            j--;
+        }
+
+        let z = 0;
+        do {
+            console.log('CON do-while: z = ' + z); // Se ejecuta al menos UNA VEZ
+            z--;
+        } while (z > 0);
+    </script>
+</body>
+
+</html>

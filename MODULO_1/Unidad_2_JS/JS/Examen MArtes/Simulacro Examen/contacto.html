@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Usuario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Mi Sitio Web</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="galeria.html">Galería</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Formulario de Registro</h2>
+            <form id="formulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+
+                <label for="estudios">Estudios:</label>
+                <select id="estudios" name="estudios">
+                    <option value="GradoMedio">Grado Medio</option>
+                    <option value="GradoSuperior">Grado Superior</option>
+                    <option value="Universidad">Universidad</option>
+                    <option value="Otros">Otros</option>
+                </select>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <aside id="lateral">
+            <h2>Información del Usuario</h2>
+            <p id="infoUsuario">Aquí aparecerán tus datos inscritos en el formulario.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <h4><span id="copyright">&copy;</span> 2024 - Mi sitio web</h4>
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
